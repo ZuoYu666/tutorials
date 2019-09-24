@@ -10,7 +10,7 @@ window.title('my window')
 window.geometry('200x200')
 
 var1 = tk.StringVar()
-l = tk.Label(window, bg='yellow', width=4, textvariable=var1)
+l = tk.Label(window, bg='yellow', width=4, textvariable=var1)     # 定义标签的（ ， 颜色， 宽度， 传到哪）
 l.pack()
 
 def print_selection():
@@ -23,7 +23,7 @@ b1.pack()
 
 var2 = tk.StringVar()
 var2.set((11,22,33,44))
-lb = tk.Listbox(window, listvariable=var2)
+lb = tk.Listbox(window, listvariable=var2)  # listbox列表
 list_items = [1,2,3,4]
 for item in list_items:
     lb.insert('end', item)

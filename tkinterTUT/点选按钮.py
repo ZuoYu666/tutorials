@@ -10,13 +10,13 @@ window.title('my window')
 window.geometry('200x200')
 
 var = tk.StringVar()
-l = tk.Label(window, bg='yellow', width=20, text='empty')
+l = tk.Label(window, bg='yellow', width=20, text='empty')    #给标签赋多少个字符
 l.pack()
 
 def print_selection():
     l.config(text='you have selected ' + var.get())
 
-r1 = tk.Radiobutton(window, text='Option A',
+r1 = tk.Radiobutton(window, text='Option A',       # 定义rediobutton，
                     variable=var, value='A',
                     command=print_selection)
 r1.pack()

@@ -3,6 +3,10 @@
 # Youtube video tutorial: https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg
 # Youku video tutorial: http://i.youku.com/pythontutorial
 
+
+# checkbutton 可以选很多东西（群选择按钮）
+
+
 import tkinter as tk
 
 window = tk.Tk()
@@ -25,7 +29,7 @@ def print_selection():
 var1 = tk.IntVar()
 var2 = tk.IntVar()
 c1 = tk.Checkbutton(window, text='Python', variable=var1, onvalue=1, offvalue=0,
-                    command=print_selection)
+                    command=print_selection)  # 加两个checkbutton按钮
 c2 = tk.Checkbutton(window, text='C++', variable=var2, onvalue=1, offvalue=0,
                     command=print_selection)
 c1.pack()
