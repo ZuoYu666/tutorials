@@ -4,13 +4,13 @@ window = tk.Tk()
 window.title('螺钉自动监测系统')
 window.geometry('200x200')
 
-l = tk.Label(window, text='', bg='yellow')
-l.pack()
 counter = 0
 def do_job():
     global counter
     l.config(text='do '+ str(counter))
     counter+=1
+
+window.iconbitmap("bitbug_favicon.ico")
 
 # 菜单
 menubar = tk.Menu(window)          # 加一个菜单条
@@ -65,7 +65,7 @@ editmenu.add_command(label='Paste')
 # 放“螺钉自动检测系统”
 var = tk.StringVar()      # 字符串变量（被用于显示区显示）
 var0 = tk.StringVar()
-l = tk.Label(window, text='螺钉自动检测分类系统', bg='blue', font=('Arial', 24), width=56,
+l = tk.Label(window, text='螺钉自动检测分类系统', bg='#F0F0F0', font=('方正姚体', 28), width=56,
              height=2)     # 窗体其它参数
 l.pack()        # 放的位置
 
@@ -83,14 +83,13 @@ def print_selection(v):
 s1 = tk.Scale(window, from_=0.0001, to=1, orient=tk.HORIZONTAL,       # 定义scale（滑动条）
              length=160, resolution=0.001) # showvalue 表示每次滑动显示值。  tickinterval 表示标签单位长度。
 
-tk.Label(window, text='批次个数:', font=('Arial', 16), width=10, height=2).place(x=1150, y=112, anchor='nw')
-s1.place(x=950, y=120, anchor='nw')      # 指定放置某一点的位置（anchor表示要放物体的锚点）
+tk.Label(window, text='训练学习率:', font=('Arial', 16), width=10, height=2).place(x=806, y=126, anchor='nw')
+s1.place(x=930, y=120, anchor='nw')      # 指定放置某一点的位置（anchor表示要放物体的锚点）
 
-
-tk.Label(window, text='学习率:', font=('Arial', 16), width=6, height=2).place(x=860, y=112, anchor='nw')
+tk.Label(window, text='训练批次个数:', font=('Arial', 16), width=12, height=2).place(x=1126, y=126, anchor='nw')
 s2 = tk.Scale(window, from_=0, to=200, tickinterval=50, orient=tk.HORIZONTAL,       # 定义scale（滑动条）
              length=200, resolution=1)
-s2.place(x=1260, y=120, anchor='nw')      # 指定放置某一点的位置（anchor表示要放物体的锚点）
+s2.place(x=1280, y=120, anchor='nw')      # 指定放置某一点的位置（anchor表示要放物体的锚点）
 
 
 image1 = tk.PhotoImage(file='C:/Users/11410/Desktop/picture/2.gif')
@@ -177,15 +176,15 @@ b73.place(x=56, y=570, anchor='nw')
 
 
 # 图像显示区
-canvas0 = tk.Canvas(window, bg='white', height=500, width=680)     # 添加一个画布（颜色，高，宽）
+canvas0 = tk.Canvas(window, bg='#F0F0F0', height=500, width=680)     # 添加一个画布（颜色，高，宽）
 
-image_file0 = tk.PhotoImage(file='俯视图_边框.png')     # 加入图片和形状
-image_file1 = tk.PhotoImage(file='正视图_边框.png')
-image_file2 = tk.PhotoImage(file='绘图区.png')
+image_file0 = tk.PhotoImage(file='俯视图_边框OjbK.png')     # 加入图片和形状
+image_file1 = tk.PhotoImage(file='正视图_边框OjbK.png')
+# image_file2 = tk.PhotoImage(file='绘图区.png')
 
-image_one = canvas0.create_image(20, 30, anchor='nw', image=image_file0)  # 放置画布中的位置（左上角）
-image_two = canvas0.create_image(460, 35, anchor='nw', image=image_file1)
-image_three = canvas0.create_image(300, 0, anchor='nw', image=image_file2)
+image_one = canvas0.create_image(95, 10, anchor='nw', image=image_file0)  # 放置画布中的位置（左上角）
+image_two = canvas0.create_image(95, 320, anchor='nw', image=image_file1)
+# image_three = canvas0.create_image(300, 0, anchor='nw', image=image_file2)
 
 canvas0.place(x=100, y=150, anchor='nw')      # 指定放置某一点的位置（anchor表示要放物体的锚点）
 
@@ -217,27 +216,27 @@ t5.place(x=1340, y=666, anchor='nw')
 
 # 最后一排的各个按钮
 b1 = tk.Button(window, font=('Arial', 12), text='型号选择', width=16,
-              height=3, bg='red')       # 加一个按钮操作
+              height=3, bg='gray')       # 加一个按钮操作
 b1.place(x=36, y=720, anchor='nw')
 
 b2= tk.Button(window, font=('Arial', 12), text='图像存储', width=16,
-              height=3, bg='orange')       # 加一个按钮操作
+              height=3, bg='gray')       # 加一个按钮操作
 b2.place(x=296, y=720, anchor='nw')
 
 b3 = tk.Button(window, font=('Arial', 12), text='模型分析', width=16,
-              height=3, bg='yellow')       # 加一个按钮操作
+              height=3, bg='gray')       # 加一个按钮操作
 b3.place(x=556, y=720, anchor='nw')
 
 b4 = tk.Button(window, font=('Arial', 12), text='样本统计', width=16,
-              height=3, bg='green')       # 加一个按钮操作
+              height=3, bg='gray')       # 加一个按钮操作
 b4.place(x=816, y=720, anchor='nw')
 
 b5 = tk.Button(window, font=('Arial', 12), text='模型评测', width=16,
-              height=3, bg='cyan')       # 加一个按钮操作
+              height=3, bg='gray')       # 加一个按钮操作
 b5.place(x=1076, y=720, anchor='nw')
 
 b6 = tk.Button(window, font=('Arial', 12), text='界面设置', width=16,
-              height=3, bg='blue')       # 加一个按钮操作
+              height=3, bg='gray')       # 加一个按钮操作
 b6.place(x=1336, y=720, anchor='nw')
 
 
@@ -257,7 +256,7 @@ r3.place(x=900, y=290, anchor='nw')
 
 
 # 分类方案
-tk.Label(window, text='工作模式选择:', font=('黑体', 15), width=16, height=2).place(x=1200, y=176, anchor='nw')
+tk.Label(window, text='分类方案选择:', font=('黑体', 15), width=16, height=2).place(x=1200, y=176, anchor='nw')
 
 r21 = tk.Radiobutton(window, text='方案一', font=('Arial', 12),       # 定义rediobutton，
                     variable=var0, value='A')
@@ -278,24 +277,24 @@ r24.place(x=1360, y=255, anchor='nw')
 
 # 右侧按钮 和文本框
 
-z1 = tk.Button(window, font=('Arial', 12), text='logistic参数设置', width=15,
-              height=2, bg='red')       # 加一个按钮操作
+z1 = tk.Button(window, font=('Arial', 12), fg='white', text='logistic参数设置', width=15,
+              height=2, bg='gray')       # 加一个按钮操作
 z1.place(x=1166, y=300, anchor='nw')
 
-z2 = tk.Button(window, font=('Arial', 12), text='SVM参数设置', width=15,
-              height=2, bg='orange')       # 加一个按钮操作
+z2 = tk.Button(window, font=('Arial', 12), fg='white', text='SVM参数设置', width=15,
+              height=2, bg='gray')       # 加一个按钮操作
 z2.place(x=1166, y=375, anchor='nw')
 
-z3 = tk.Button(window, font=('Arial', 12), text='xgBoost参数设置', width=15,
-              height=2, bg='yellow')       # 加一个按钮操作
+z3 = tk.Button(window, font=('Arial', 12), fg='white', text='xgBoost参数设置', width=15,
+              height=2, bg='gray')       # 加一个按钮操作
 z3.place(x=1166, y=450, anchor='nw')
 
-z4 = tk.Button(window, font=('Arial', 12), text='规格设定', width=15,
-              height=2, bg='cyan')       # 加一个按钮操作
+z4 = tk.Button(window, font=('Arial', 12), fg='white', text='规格设定', width=15,
+              height=2, bg='gray')       # 加一个按钮操作
 z4.place(x=1166, y=525, anchor='nw')
 
-z5 = tk.Button(window, font=('Arial', 12), text='废品重检', width=15,
-              height=2, bg='purple')       # 加一个按钮操作
+z5 = tk.Button(window, font=('Arial', 12), fg='white', text='废品重检', width=15,
+              height=2, bg='gray')       # 加一个按钮操作
 z5.place(x=1166, y=600, anchor='nw')
 
 tk.Label(window, text='通讯状态:', font=('Arial', 12), width=12, height=2).place(x=870, y=320, anchor='nw')
@@ -336,8 +335,8 @@ t02.place(x=990, y=629, anchor='nw')
 
 
 
-b66 = tk.Button(window, text='启动', font=('Arial', 16), width=7,
-              height=3, bg='red')
+b66 = tk.Button(window, text='启动', font=('Arial', 16),fg='white',  width=7,
+              height=3, bg='green')
 b66.place(x=1360, y=360, anchor='nw')
 
 
@@ -346,11 +345,11 @@ b666 = tk.Button(window, text='暂停', font=('Arial', 16), width=7,
 b666.place(x=1500, y=360, anchor='nw')
 
 b6666 = tk.Button(window, text='停止', font=('Arial', 16), width=7,
-              height=3, bg='blue')
+              height=3, bg='red')
 b6666.place(x=1360, y=500, anchor='nw')
 
 b66666 = tk.Button(window, text='退出', font=('Arial', 16), width=7,
-              height=3, bg='green')
+              height=3, bg='#F0F0F0')
 b66666.place(x=1500, y=500, anchor='nw')
 
 
