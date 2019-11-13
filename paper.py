@@ -1,7 +1,7 @@
 import tkinter as tk
 
 window = tk.Tk()
-window.title('螺钉自动监测系统')
+window.title('螺栓智能分类系统')
 window.geometry('200x200')
 
 counter = 0
@@ -15,7 +15,7 @@ window.iconbitmap("bitbug_favicon.ico")
 # 菜单
 menubar = tk.Menu(window)          # 加一个菜单条
 filemenu = tk.Menu(menubar)       # 设置菜单条的参数
-menubar.add_cascade(label='新建')  # 在菜单条上加东西
+menubar.add_cascade(label='连接设备')  # 在菜单条上加东西
 filemenu.add_command(label='New')  # 在子菜单条上加东西
 filemenu.add_command(label='Open')
 filemenu.add_command(label='Save')
@@ -65,7 +65,7 @@ editmenu.add_command(label='Paste')
 # 放“螺钉自动检测系统”
 var = tk.StringVar()      # 字符串变量（被用于显示区显示）
 var0 = tk.StringVar()
-l = tk.Label(window, text='螺钉自动检测分类系统', bg='#F0F0F0', font=('方正姚体', 28), width=56,
+l = tk.Label(window, text='螺栓智能分类系统', bg='#F0F0F0', font=('方正姚体', 28), width=56,
              height=2)     # 窗体其它参数
 l.pack()        # 放的位置
 
@@ -189,29 +189,33 @@ image_two = canvas0.create_image(95, 320, anchor='nw', image=image_file1)
 canvas0.place(x=100, y=150, anchor='nw')      # 指定放置某一点的位置（anchor表示要放物体的锚点）
 
 # 杆直径、半径等参数
-tk.Label(window, text='纹部杆长b(mm):', font=('Arial', 12), width=12, height=2).place(x=20, y=659, anchor='nw')
-t1 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
+tk.Label(window, text='螺纹长度b(mm):', font=('Arial', 12), width=12, height=2).place(x=20, y=659, anchor='nw')
+t1 = tk.Text(window, font=('Arial', 15), height=1, width=6)         # 加个文本框
 t1.place(x=140, y=666, anchor='nw')
 
-tk.Label(window, text='栓头厚度K(mm):', font=('Arial', 12), width=12, height=2).place(x=260, y=659, anchor='nw')
-t2 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
-t2.place(x=380, y=666, anchor='nw')
+tk.Label(window, text='栓头厚度K(mm):', font=('Arial', 12), width=12, height=2).place(x=230, y=659, anchor='nw')
+t2 = tk.Text(window, font=('Arial', 15), height=1, width=6)         # 加个文本框
+t2.place(x=350, y=666, anchor='nw')
 
-tk.Label(window, text='栓头直径dk(mm)', font=('Arial', 12), width=13, height=2).place(x=500, y=659, anchor='nw')
-t3 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
-t3.place(x=620, y=666, anchor='nw')
+tk.Label(window, text='栓头直径dk(mm):', font=('Arial', 12), width=13, height=2).place(x=440, y=659, anchor='nw')
+t3 = tk.Text(window, font=('Arial', 15), height=1, width=6)         # 加个文本框
+t3.place(x=560, y=666, anchor='nw')
 
-tk.Label(window, text='杆部直径s(mm):', font=('Arial', 12), width=12, height=2).place(x=740, y=659, anchor='nw')
-t4 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
-t4.place(x=860, y=666, anchor='nw')
+tk.Label(window, text='六角内径s(mm):', font=('Arial', 12), width=12, height=2).place(x=650, y=659, anchor='nw')
+t4 = tk.Text(window, font=('Arial', 15), height=1, width=6)         # 加个文本框
+t4.place(x=770, y=666, anchor='nw')
 
-tk.Label(window, text='螺杆直径d(mm):', font=('Arial', 12), width=12, height=2).place(x=980, y=659, anchor='nw')
-t5 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
-t5.place(x=1100, y=666, anchor='nw')
+tk.Label(window, text='螺纹中径d(mm):', font=('Arial', 12), width=12, height=2).place(x=860, y=659, anchor='nw')
+t5 = tk.Text(window, font=('Arial', 15), height=1, width=6)         # 加个文本框
+t5.place(x=990, y=666, anchor='nw')
 
-tk.Label(window, text='螺栓质量m(mm):', font=('Arial', 12), width=13, height=2).place(x=1220, y=659, anchor='nw')
-t5 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
-t5.place(x=1340, y=666, anchor='nw')
+tk.Label(window, text='牙距极限公差(mm):', font=('Arial', 12), width=15, height=2).place(x=1080, y=659, anchor='nw')
+t5 = tk.Text(window, font=('Arial', 15), height=1, width=6)         # 加个文本框
+t5.place(x=1220, y=666, anchor='nw')
+
+tk.Label(window, text='螺栓质量m(mm):', font=('Arial', 12), width=13, height=2).place(x=1310, y=659, anchor='nw')
+t6 = tk.Text(window, font=('Arial', 15), height=1, width=6)         # 加个文本框
+t6.place(x=1430, y=666, anchor='nw')
 
 
 # 最后一排的各个按钮
@@ -277,7 +281,7 @@ r24.place(x=1360, y=255, anchor='nw')
 
 # 右侧按钮 和文本框
 
-z1 = tk.Button(window, font=('Arial', 12), fg='white', text='logistic参数设置', width=15,
+z1 = tk.Button(window, font=('Arial', 12), fg='white', text='中径线校准', width=15,
               height=2, bg='gray')       # 加一个按钮操作
 z1.place(x=1166, y=300, anchor='nw')
 
@@ -289,7 +293,7 @@ z3 = tk.Button(window, font=('Arial', 12), fg='white', text='xgBoost参数设置
               height=2, bg='gray')       # 加一个按钮操作
 z3.place(x=1166, y=450, anchor='nw')
 
-z4 = tk.Button(window, font=('Arial', 12), fg='white', text='规格设定', width=15,
+z4 = tk.Button(window, font=('Arial', 12), fg='white', text='螺栓规格选型', width=15,
               height=2, bg='gray')       # 加一个按钮操作
 z4.place(x=1166, y=525, anchor='nw')
 
@@ -313,18 +317,18 @@ t05.place(x=990, y=429, anchor='nw')
 
 
 
-tk.Label(window, text='电子用途（个）:', font=('Arial', 12), width=12, height=2).place(x=870, y=470, anchor='nw')
+tk.Label(window, text='精密螺栓（个）:', font=('Arial', 12), width=12, height=2).place(x=870, y=470, anchor='nw')
 t07 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
 t07.place(x=990, y=479, anchor='nw')
 
 
 
-tk.Label(window, text='工业用途（个）:', font=('Arial', 12), width=12, height=2).place(x=870, y=520, anchor='nw')
+tk.Label(window, text='工业螺栓（个）:', font=('Arial', 12), width=12, height=2).place(x=870, y=520, anchor='nw')
 t09 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
 t09.place(x=990, y=529, anchor='nw')
 
 
-tk.Label(window, text='一般用途（个）:', font=('Arial', 12), width=12, height=2).place(x=870, y=570, anchor='nw')
+tk.Label(window, text='家用螺栓（个）:', font=('Arial', 12), width=12, height=2).place(x=870, y=570, anchor='nw')
 t01 = tk.Text(window, font=('Arial', 15), height=1, width=9)         # 加个文本框
 t01.place(x=990, y=579, anchor='nw')
 
